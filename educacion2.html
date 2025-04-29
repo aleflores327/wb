@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación</title>
+    <link rel="stylesheet" href="estilos/componentes.css">
+
+</head>
+<style>
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: lightsteelblue;
+        padding: 40px;
+        
+    }
+
+    /* Carrusel */
+    .carrusel-contenedor {
+        margin: 30px ;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        width: 80%;
+    }
+
+    .carrusel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        scroll-behavior: smooth;
+    }
+
+    .articulosEdu {
+        min-width: 100%;
+        padding: 30px;
+        background-color: #e7914a;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .contenido-texto {
+       padding: 35px;;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .articulosEdu h3 {
+        color: #ddd0a6;
+        margin-bottom: 10px;
+        font-size: 2.2rem;
+        text-align: left;
+    }
+
+    .texto {
+        font-size: 1.15rem;
+        color: #000000;
+        text-align: left;
+    }
+
+    .imgescuelas {
+        width: 45%;
+        max-height: 350px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.678);
+    }
+
+    /* Botones de flecha */
+    .btn-carrusel {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(233, 181, 102, 0.7);
+        color: white;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .izquierda {
+        left: 10px;
+    }
+
+    .derecha {
+        right: 10px;
+    }
+</style>
+
+<body>
+    <div id="componentes"></div>
+    <main>
+        <h1>Educación</h1>
+<div class="carrusel-contenedor">
+    <button class="btn-carrusel izquierda" onclick="moverCarrusel(-1)">⟨</button>
+
+        <div id="escuelas" class="carrusel">
+            <article class="articulosEdu">
+
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Jardin de la Infancia Jose Maria Castañeda y Escalada</h3>
+                    <p class="texto">Pbro. José Gaytan Zárate #33, Los Palmitos, Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/josemaria.png" alt="" class="imgescuelas">
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Prescolar Amado Nervo</h3>
+                    <p class="texto">C. Ramón Sigala 252, Col Conasupo, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/pree_amadonervo.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Prescolar Josefa Ortiz de Dominguez</h3>
+                    <p class="texto">C. Benito Juárez 275, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/pree_josefaortiz.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">URBANA matutina 308</h3>
+                    <p class="texto">C. Prolong. Cuauhtémoc 388, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/urbanamatutina.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">URBANA vespertina 361</h3>
+                    <p class="texto">C. Prolong. Cuauhtémoc 368, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/urbanavespertina.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Primaria Margarita Maza de Juarez</h3>
+                    <p class="texto">C. 16 de Septiembre 845, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/primaramargarita.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Secundaria Técnica #64</h3>
+                    <p class="texto">C. Ejido 170, 45480 Cuquío, Jal. <br>+52 37 3796 5756</p>
+                </div>
+                <img src="imagenes/escuelas/sec_tecnica.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Seminario Auxiliar de Guadalajara en Cuquío</h3>
+                    <p class="texto">Calle Prol. José Ayala 2385, 45480 Cuquío, Jal. <br>
+                        <a href="https://www.facebook.com/SeminarioAuxiliardeCuquioOficial/"
+                            target="_blank">Facebook</a> <br>
+                        +52 37 3796 5755
+                    </p>
+                </div>
+                <img src="imagenes/escuelas/seminario.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">CBTA 227 Jose Clemente Orozco</h3>
+                    <p class="texto">Mariano Jiménez 485, C. Peña Azul S/N, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/cbta227.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">CECYTEJ Aula Externa Cuquío</h3>
+                    <p class="texto">Nicolás Bravo 879, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/cecytej.jpg" alt="" class="imgescuelas">
+
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Escuela Preparatoria NO.8 Módulo Cuquío</h3>
+
+                    <p class="texto">C. José Ayala 602, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/prepaudg.jpg" alt="" class="imgescuelas">
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Instituto Tecnológico Superior de Cuquío</h3>
+
+                    <p class="texto">45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/institutotec.png" alt="" class="imgescuelas">
+            </article>
+
+            <article class="articulosEdu">
+                <div class="contenido-texto">
+                    <h3 class="titulosEdu">Centro de Atención Múltiple C.A.M Cuquío</h3>
+
+                    <p class="texto">Nicolás Bravo 879, 45480 Cuquío, Jal.</p>
+                </div>
+                <img src="imagenes/escuelas/centrodeatencionmultiple.jpg" alt="" class="imgescuelas">
+            </article>
+        </div>
+        <button class="btn-carrusel derecha" onclick="moverCarrusel(1)">⟩</button>
+    </div>
+    </main>
+
+    <script>
+        let indice = 0;
+
+        function moverCarrusel(direccion) {
+            const carrusel = document.getElementById("escuelas");
+            const total = carrusel.children.length;
+            const ancho = carrusel.clientWidth;
+
+            indice += direccion;
+
+            if (indice < 0) indice = total - 1;
+            if (indice >= total) indice = 0;
+            carrusel.style.transform = `translateX(-${ancho * indice}px)`;
+
+        }
+    </script>
+
+    <script src="componentes.js"></script>
+</body>
+
+</html>
